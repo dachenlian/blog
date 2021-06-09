@@ -139,7 +139,7 @@ output sequence \\(\mathbf{Y}_{1:m}\\) conditioned on the input sequence
 $$ p_{\theta_{\text{model}}}(\mathbf{Y}_{1:m} | \mathbf{X}_{1:n}). $$
 
 Without loss of generality, an input word sequence of \\(n\\) words is
-hereby represented by the vector sequnece
+hereby represented by the vector sequence
 \\(\mathbf{X}_{1:n} = \mathbf{x}_1, \ldots, \mathbf{x}_n\\) and an output
 sequence of \\(m\\) words as
 \\(\mathbf{Y}_{1:m} = \mathbf{y}_1, \ldots, \mathbf{y}_m\\).
@@ -340,7 +340,7 @@ language model.
 word \\(\mathbf{y}_1\\).
 
 
-\\({}^4\\) Without loss of generalitiy, we exclude the normalization layers
+\\({}^4\\) Without loss of generality, we exclude the normalization layers
 to not clutter the equations and illustrations.
 
 
@@ -541,7 +541,7 @@ the causal connected graph of the self-attention layer as can be seen in
 the red boxes on the bottom.
 
 Nevertheless, the GPT2-initialized decoder also has to condition the
-decoder on \\(\mathbf{\overline{X}}_{1:n}\\). Analoguos to the
+decoder on \\(\mathbf{\overline{X}}_{1:n}\\). Analogous to the
 BERT-initialized decoder, randomly initialized weight parameters for the
 cross-attention layer are therefore added to each decoder block. This is
 illustrated *e.g.* for the second encoder block by
@@ -580,7 +580,7 @@ As a result, the key projection weights
 \\(\mathbf{W}^{\text{self-attn}, 3}_{k}, \mathbf{W}^{\text{self-attn}, 3}_{v}, \mathbf{W}^{\text{self-attn}, 3}_{q}\\)
 are updated twice for each backward propagation pass - once when the
 gradient is backpropagated through the third decoder block and once when
-the gradient is backprapageted thourgh the third encoder block.
+the gradient is backprapagated thourgh the third encoder block.
 
 In the same way, we can warm-start an encoder-decoder model by sharing
 the encoder weights with the decoder. Being able to share the weights
@@ -686,7 +686,7 @@ table shows which datasets were used for each task.
   |BBC XSum                   |[Narayan et al. (2018a)](https://arxiv.org/abs/1808.08745)              																																				 |[link](https://huggingface.co/nlp/viewer/?dataset=xsum)                 
   |Gigaword                   |[Napoles et al. (2012)](http://dx.doi.org/10.18653/v1/D15-1044)         																																				 |[link](https://huggingface.co/nlp/viewer/?dataset=gigaword)              
 
-Depending on the task, a slightly different training regime was used.
+Depending on the task, a slightly different training regimen was used.
 *E.g.* according to the size of the dataset and the specific task, the
 number of training steps ranges from 200K to 500K, the batch size is set
 to either 128 or 256, the input length ranges from 128 to 512 and the
